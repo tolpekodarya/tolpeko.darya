@@ -18,6 +18,12 @@ public class homework4 {
         System.out.print("Enter size array: ");
         int size = scanner.nextInt();
 
+        if (size <= 0) {
+            System.out.println("Array size must be greater than 0");
+            System.out.println("-".repeat(70));
+            return;
+        }
+
         int[] array = new int[size];
 
         for (int i = 0; i < size; i++)  array[i] = (int)(Math.random() * 100);
@@ -28,11 +34,18 @@ public class homework4 {
         System.out.println();
         System.out.println("-".repeat(70));
     }
+
     public static void findMaxMin(){
         System.out.println("Task 2:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter size array: ");
         int size = scanner.nextInt();
+
+        if (size <= 0) {
+            System.out.println("Array size must be greater than 0");
+            System.out.println("-".repeat(70));
+            return;
+        }
 
         int[] array = new int[size];
 
@@ -60,11 +73,18 @@ public class homework4 {
 
         System.out.println("-".repeat(70));
     }
+
     public static void findIndex(){
         System.out.println("Task 3:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter size array: ");
         int size = scanner.nextInt();
+
+        if (size <= 0) {
+            System.out.println("Array size must be greater than 0");
+            System.out.println("-".repeat(70));
+            return;
+        }
 
         int[] array = new int[size];
 
@@ -83,7 +103,7 @@ public class homework4 {
 
             if(array[i] > max){
                 max = array[i];
-                maxIndex = (i + 1);
+                maxIndex = i;
             }
 
         }
@@ -91,7 +111,7 @@ public class homework4 {
 
             if(array[i] < min){
                 min = array[i];
-                minIndex = (i + 1);
+                minIndex = i;
             }
         }
 
@@ -100,11 +120,18 @@ public class homework4 {
         System.out.println("-".repeat(70));
 
     }
+
     public static void getNull(){
         System.out.println("Task 4:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter size array: ");
         int size = scanner.nextInt();
+
+        if (size <= 0) {
+            System.out.println("Array size must be greater than 0");
+            System.out.println("-".repeat(70));
+            return;
+        }
 
         int[] array = new int[size];
 
@@ -113,20 +140,33 @@ public class homework4 {
         for(int i = 0; i <size; i++)  System.out.print(array[i] + " ");
         System.out.println();
 
-        int nollElement = 0;
+        int countZero = 0;
         for(int i = 0; i < array.length; i++){
-
-            if(array[i] == nollElement){
-                System.out.println("Find null element!!");
-            } else System.out.println("Dont find null element!!");
+            if(array[i] == 0){
+                countZero++;
+            }
         }
+
+        if(countZero > 0){
+            System.out.println("Found " + countZero + " null elements!");
+        } else {
+            System.out.println("No null elements found!");
+        }
+
         System.out.println("-".repeat(70));
     }
+
     public static void replaceElements(){
         System.out.println("Task 5:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter size array: ");
         int size = scanner.nextInt();
+
+        if (size <= 0) {
+            System.out.println("Array size must be greater than 0");
+            System.out.println("-".repeat(70));
+            return;
+        }
 
         int[] array = new int[size];
 
@@ -154,11 +194,18 @@ public class homework4 {
         System.out.println("-".repeat(70));
 
     }
+
     public static void checkArray(){
         System.out.println("Task 6:");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter size array: ");
         int size = scanner.nextInt();
+
+        if (size <= 0) {
+            System.out.println("Array size must be greater than 0");
+            System.out.println("-".repeat(70));
+            return;
+        }
 
         int[] array = new int[size];
 
