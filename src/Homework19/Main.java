@@ -49,7 +49,7 @@ public class Main {
         }
     }
 
-    @SuppressWarnings("unchecked")
+
     private static void analyzeAndPrint(PhoneBookService service) {
         Map<String, Object> result = service.analyzeAddresses();
 
