@@ -30,7 +30,7 @@ public class BubbleSortTask implements Runnable {
         }
 
         long endTime = System.currentTimeMillis();
-        System.out.printf("[%s] Отсортировано: %s (время: %d мс)%n",
+        System.out.printf("[%s]: %s (%d мс)%n",
                 threadName, Arrays.toString(array), (endTime - startTime));
     }
 }

@@ -1,15 +1,14 @@
 package Homework20.Sorting;
-
 import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
 
-    private static final int[] ORIGINAL_ARRAY = generateRandomArray(20);
+    private static final int[] ORIGINAL_ARRAY = generateRandomArray(10);
 
     public static void main(String[] args) {
         System.out.println("Исходный массив: " + Arrays.toString(ORIGINAL_ARRAY));
-        System.out.println("-".repeat(60));
+        System.out.println("-".repeat(100));
 
         Thread insertionThread = new Thread(new InsertionSortTask(ORIGINAL_ARRAY), "InsertionSort");
         Thread selectionThread = new Thread(new SelectionSortTask(ORIGINAL_ARRAY), "SelectionSort");
@@ -27,7 +26,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
     private static int[] generateRandomArray(int size) {
         int[] array = new int[size];
         Random random = new Random();
